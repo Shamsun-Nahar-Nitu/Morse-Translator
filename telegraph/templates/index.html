@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Victorian Telegraph</title>
+    <link rel="stylesheet" href="{% static 'css/telegraph.css' %}">
+</head>
+<body>
+    <div class="machine-frame">
+        <h1>VICTORIAN TELEGRAPH</h1>
+        <div class="pixel-art-key"></div>
+        
+        <textarea id="inputField" placeholder="Enter message..."></textarea>
+        
+        <div class="paper-strip">
+            <p id="morseDisplay">.... . .-.. .-.. ---</p>
+        </div>
+
+        <div class="actions">
+            <button id="beepBtn">PLAY SIGNAL</button>
+            <form action="{% url 'download' %}" method="post" style="display:inline;">
+                {% csrf_token %}
+                <input type="hidden" name="text" id="hiddenInput">
+                <button type="submit" class="download-btn">DOWNLOAD TELEGRAM</button>
+            </form>
+        </div>
+    </div>
+    <script src="{% static 'js/telegraph.js' %}"></script>
+</body>
+</html>
