@@ -1,0 +1,39 @@
+/* telegraph/static/css/telegraph.css */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    background: #4a3520;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'VT323', monospace;
+}
+
+.machine-frame {
+    background: #eaddca;
+    padding: 30px;
+    border: 10px solid #b8860b;
+    box-shadow: 20px 20px 0px #2c1810;
+    text-align: center;
+    width: 400px;
+}
+
+textarea {
+    width: 100%;
+    background: transparent;
+    border: 2px solid #4a3520;
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    height: 80px;
+}
+
+.paper-strip {
+    background: white;
+    margin: 20px 0;
+    padding: 10px;
+    border-left: 5px dotted #ccc;
+    font-size: 28px;
+    min-height: 40px;
+    word-wrap: break-word;
+}
